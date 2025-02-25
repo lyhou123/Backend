@@ -1,0 +1,23 @@
+version: '3.8'
+services:
+  api:
+    container_name: 'mini_project_api'
+    volumes:
+      - ./filestorage/images/:/app/filestorage/images
+      - /var/run/docker.sock:/var/run/docker.sock
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    environment:
+      - TZ=Asia/Bangkok
+    privileged: true  # Grant additional privileges for Docker-in-Docker
+    ports:
+      - "4020:8080"
+    networks:
+      - mini_project_network
+    # Define environment variables or additional settings here if needed
+
+networks:
+  cyber_network:
+    driver: bridge
