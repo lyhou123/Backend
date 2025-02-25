@@ -8,8 +8,10 @@ import lombok.Builder;
 @Builder
 public record ProductRequest(
         @NotBlank(message = "Title is required")
-        @Max(value = 255, message = "Title must be less than 255 characters")
         String title,
+
+        @NotBlank(message = "Category name is required")
+        String categoryName,
 
         @NotBlank(message = "Description is required")
         String description,
