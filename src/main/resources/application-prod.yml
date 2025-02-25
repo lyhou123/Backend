@@ -4,7 +4,7 @@ server:
   #  This is the default port for the application
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/product
+    url: jdbc:postgresql://136.228.158.126:4021/mini-db
     username: postgres
     password: lyhou123
     driver-class-name: org.postgresql.Driver
