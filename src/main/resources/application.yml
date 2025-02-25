@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: "MPTC Mini Project"
+
+  profiles:
+    active: dev
