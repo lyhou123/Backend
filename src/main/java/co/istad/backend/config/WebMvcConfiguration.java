@@ -14,17 +14,12 @@ public class WebMvcConfiguration implements WebMvcConfigurer {
     @Value("${file_storage.client_path}")
     private String clientLocation;
 
-    @Value("${git.clone_directory}")
-    private String clone_dir;
-
-
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
 
         registry.addResourceHandler(clientLocation)
                 .addResourceLocations("file:" + fileStorageLocation);
 
-        registry.addResourceHandler(clone_dir);
     }
 
 

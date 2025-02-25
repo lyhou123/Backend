@@ -4,7 +4,7 @@ server:
   #  This is the default port for the application
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/cyber
+    url: jdbc:postgresql://localhost:5432/product
     username: postgres
     password: lyhou123
     driver-class-name: org.postgresql.Driver
@@ -16,6 +16,11 @@ spring:
     properties:
       hibernate:
       dialect: org.hibernate.dialect.PostgreSQLDialect
+
+  servlet:
+    multipart:
+      max-request-size: 5MB
+      max-file-size: 5MB
 
 #      This is for the file storage image location
 file_storage:
@@ -31,3 +36,8 @@ ACCESS_TOKEN_PUBLIC_KEY_PATH: access-refresh-token-keys/access-token-public.key
 # This is for the refresh token
 REFRESH_TOKEN_PRIVATE_KEY_PATH: access-refresh-token-keys/refresh-token-private.key
 REFRESH_TOKEN_PUBLIC_KEY_PATH: access-refresh-token-keys/refresh-token-public.key
+
+
+springdoc:
+  swagger-ui:
+    path: /api

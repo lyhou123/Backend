@@ -1,6 +1,7 @@
 package co.istad.backend.config.jpa;
 
-import co.istad.inspectra.security.CustomUserDetails;
+
+import co.istad.backend.security.CustomUserDetails;
 import jakarta.validation.constraints.NotNull;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.AuditorAware;
