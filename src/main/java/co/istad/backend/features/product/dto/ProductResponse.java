@@ -8,6 +8,7 @@ public record ProductResponse(
         String title,
         String description,
         String price,
+        String category,
         String thumbnail,
         String createdAt
 ) {

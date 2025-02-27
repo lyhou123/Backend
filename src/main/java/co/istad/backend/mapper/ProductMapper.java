@@ -1,7 +1,7 @@
 package co.istad.backend.mapper;
 
 import co.istad.backend.domain.Product;
-import co.istad.backend.features.product.dto.ProductRequest;
+
 import co.istad.backend.features.product.dto.ProductResponse;
 import co.istad.backend.features.product.dto.UpdateProductRequest;
 import org.mapstruct.*;
@@ -10,8 +10,9 @@ import org.mapstruct.*;
 
 public interface ProductMapper {
 
-    Product mapToProduct(ProductRequest request);
 
+
+    @Mapping(target = "category", source = "category.name")
     ProductResponse mapToProductResponse(Product product);
 
     @BeanMapping(nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE)
