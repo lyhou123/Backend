@@ -19,5 +19,5 @@ services:
     # Define environment variables or additional settings here if needed
 
 networks:
-  cyber_network:
+  mini_project_network:
     driver: bridge
