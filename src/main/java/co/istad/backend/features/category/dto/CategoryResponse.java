@@ -5,6 +5,8 @@ import lombok.Builder;
 @Builder
 public record CategoryResponse(
         String uuid,
-        String name
+        String name,
+        String createdAt,
+        String createdBy
 ) {
 }
